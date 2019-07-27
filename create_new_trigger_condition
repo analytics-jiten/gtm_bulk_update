@@ -1,0 +1,30 @@
+//Please follow the below steps to create a new filter conditon for GTM Triggers
+
+Step 1: Go to the triggers panel in GTM and open any trigger 
+Step 2: Add the desired condition/filter in any one trigger you want to apply/update in all the triggers
+Step 3: Don't forget to note down the trigger name you have updated
+Step 4: Export the updated container and search the name of the edited trigger in trigger block
+Step 5: Once located, go into the filter condition block and copy the filter block you added in the trigger in GTM Interface.
+
+The filter condition block should look like this:
+
+//Filter Condition Block
+{
+    "type": "CONTAINS",
+    "parameter": [
+      {
+          "type": "TEMPLATE",
+          "key": "arg0",
+          "value": "{{OptanonGroups}}"
+      },
+      {
+          "type": "TEMPLATE",
+          "key": "arg1",
+          "value": ",4,"
+       }
+     ]
+}
+
+//Continue reading the article further to assign this to java script variable and to proceed further
+//Also, you can also create the filter condition in testing environment/workspace as we just need the filter condition block
+ 
